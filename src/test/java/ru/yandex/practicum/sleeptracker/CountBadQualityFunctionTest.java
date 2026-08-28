@@ -1,6 +1,7 @@
 package ru.yandex.practicum.sleeptracker;
 
 import org.junit.jupiter.api.Test;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -9,15 +10,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CountBadQualityFunctionTest {
 
     @Test
-    void shouldCountZeroWhenNoBadSessions(){
+    void shouldCountZeroWhenNoBadSessions() {
         var session1 = new SleepingSession(
-                LocalDateTime.of(2025,10,1,22,15),
-                LocalDateTime.of(2025,10,2,8,0),
+                LocalDateTime.of(2025, 10, 1, 22, 15),
+                LocalDateTime.of(2025, 10, 2, 8, 0),
                 SleepQuality.GOOD
         );
         var session2 = new SleepingSession(
-                LocalDateTime.of(2025,10,2,23,0),
-                LocalDateTime.of(2025,10,3,8,0),
+                LocalDateTime.of(2025, 10, 2, 23, 0),
+                LocalDateTime.of(2025, 10, 3, 8, 0),
                 SleepQuality.NORMAL
         );
         var function = new CountBadQualityFunction();
@@ -26,6 +27,7 @@ public class CountBadQualityFunctionTest {
         assertEquals("Количество сессий с плохим качеством сна: ", result.getDescription());
         assertEquals(0L, result.getValue());
     }
+
     @Test
     void shouldCountBadSessionsCorrectly() {
         var session1 = new SleepingSession(
