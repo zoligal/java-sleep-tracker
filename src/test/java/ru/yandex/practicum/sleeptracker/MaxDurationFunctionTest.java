@@ -16,6 +16,7 @@ public class MaxDurationFunctionTest {
         assertEquals("Максимальная продолжительность сессии (мин): ", result.getDescription());
         assertEquals(0L, result.getValue());
     }
+    
     @Test
     void shouldFindMaximumCorrectly() {
         var session1 = new SleepingSession(
