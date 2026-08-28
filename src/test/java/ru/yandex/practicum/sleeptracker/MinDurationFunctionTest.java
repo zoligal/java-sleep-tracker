@@ -9,13 +9,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MinDurationFunctionTest {
     @Test
-    void shouldReturnZeroWhenNoSessions(){
+    void shouldReturnZeroWhenNoSessions() {
         var function = new MinDurationFunction();
         var result = function.analyze(List.of());
 
         assertEquals("Минимальная продолжительность сессии (мин):", result.getDescription());
         assertEquals(0L, result.getValue());
     }
+    
     @Test
     void shouldFindMinimumCorrectly() {
         // Сессия 1: 22:15–08:00 = 585 минут
