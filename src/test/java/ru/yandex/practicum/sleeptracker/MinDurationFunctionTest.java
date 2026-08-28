@@ -16,7 +16,7 @@ public class MinDurationFunctionTest {
         assertEquals("Минимальная продолжительность сессии (мин):", result.getDescription());
         assertEquals(0L, result.getValue());
     }
-    
+
     @Test
     void shouldFindMinimumCorrectly() {
         // Сессия 1: 22:15–08:00 = 585 минут
