@@ -1,7 +1,7 @@
 package ru.yandex.practicum.sleeptracker;
 
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,10 +13,10 @@ public class MaxDurationFunctionTest {
         var function = new MaxDurationFunction();
         var result = function.analyze(List.of());
 
-        assertEquals("Максимальная продолжительность сессии (мин): ", result.getDescription());
+        assertEquals("Максимальная продолжительность сессии (мин):", result.getDescription());
         assertEquals(0L, result.getValue());
     }
-    
+
     @Test
     void shouldFindMaximumCorrectly() {
         var session1 = new SleepingSession(
@@ -32,7 +32,7 @@ public class MaxDurationFunctionTest {
         var function = new MaxDurationFunction();
         var result = function.analyze(List.of(session1, session2));
 
-        assertEquals("Максимальная продолжительность сессии (мин): ", result.getDescription()); // <-- исправлено
+        assertEquals("Максимальная продолжительность сессии (мин):", result.getDescription()); // <-- исправлено
         assertEquals(585L, result.getValue());
     }
 }
