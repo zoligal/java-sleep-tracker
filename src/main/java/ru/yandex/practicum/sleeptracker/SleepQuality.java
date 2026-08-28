@@ -1,4 +1,7 @@
 package ru.yandex.practicum.sleeptracker;
 
-public class SleepQuality {
+public enum SleepQuality {
+    GOOD,
+    NORMAL,
+    BAD
 }
