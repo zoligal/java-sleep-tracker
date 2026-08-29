@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MinDurationFunctionTest {
     @Test
-    void shouldReturnZeroWhenNoSessions() {
+    void shouldReturnZeroIfEmpty() {
         var function = new MinDurationFunction();
         var result = function.analyze(List.of());
 

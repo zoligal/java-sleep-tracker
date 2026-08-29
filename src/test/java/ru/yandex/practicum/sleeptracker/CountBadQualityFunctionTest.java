@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CountBadQualityFunctionTest {
 
     @Test
-    void shouldCountZeroWhenNoBadSessions() {
+    void shouldZeroOnNoBadSessions() {
         var session1 = new SleepingSession(
                 LocalDateTime.of(2025, 10, 1, 22, 15),
                 LocalDateTime.of(2025, 10, 2, 8, 0),
