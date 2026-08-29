@@ -1,1 +1,19 @@
+# IntelliJ IDEA
+.idea/
+*.iml
 out/
+
+# Java / сборка
+target/
+build/
+*.class
+
+# Локальные конфиги, которые не для команды
+.settings/
+.classpath
+.project
+
+# ОС и мелочи
+.DS_Store
+Thumbs.db
+
